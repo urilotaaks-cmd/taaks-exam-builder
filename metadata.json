@@ -1,0 +1,6 @@
+{
+  "name": "TAAK'S EXAM BUILDER",
+  "description": "Assistant IA pour enseignants (AI TAAK'S INCUBATOR) : conception d'évaluations scolaires et épreuves officielles conformes aux programmes du MINESEC Cameroun (6e à Terminale, APC, BEPC, Probatoire, Baccalauréat), barèmes stricts, corrigés détaillés et export Word/PDF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
