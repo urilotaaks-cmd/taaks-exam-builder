@@ -754,24 +754,10 @@ Retourne un audit détaillé avec note sur 100 pour chaque dimension, score glob
 });
 
 // Vite middleware setup (development vs production)
-async function startServer() {
-  if (process.env.NODE_ENV !== "production") {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: "spa",
-    });
-    app.use(vite.middlewares);
-  } else {
-    const distPath = path.join(process.cwd(), "dist");
-    app.use(express.static(distPath));
-    app.get("*", (_req, res) => {
-      res.sendFile(path.join(distPath, "index.html"));
-    });
-  }
-
+if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`TAAK'S EXAM BUILDER server running on http://localhost:${PORT}`);
+    console.log(`TAAK'S EXAM BUILDER server running on port ${PORT}`);
   });
 }
 
-startServer();
+export default app;
